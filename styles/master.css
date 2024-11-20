@@ -1,11 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
+    font-family: 'Spartan';
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+body {
+    width: 100%;
+}
+
+/* Typography */
 h1 {
     font-size: 50px;
     line-height: 1.6;
@@ -24,8 +30,8 @@ h4 {
 }
 
 h6 {
-    font-weight: 700;
     font-size: 12px;
+    font-weight: 700;
 }
 
 p {
@@ -34,7 +40,8 @@ p {
     margin: 15px 0 20px 0;
 }
 
-.section-p1{
+/* Utility Classes */
+.section-p1 {
     padding: 40px 80px;
 }
 
@@ -42,26 +49,23 @@ p {
     margin: 40px 0;
 }
 
-body {
-    width: 100%;
-}
-
 .logo {
-    width: 35px;
     height: 20px;
+    width: 35px;
 }
 
+/* Header Section */
 #header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 50px;
     background-color: #e0e0e0;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25) ;
-    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 1000;
 }
 
 #navbar {
@@ -70,9 +74,9 @@ body {
     justify-content: center;
 }
 
-#navbar li{
+#navbar li {
     list-style: none;
-    padding: 0px 20px;
+    padding: 0 20px;
     position: relative;
 }
 
@@ -81,12 +85,12 @@ body {
     font-size: 16px;
     font-weight: 600;
     color: black;
-    transition: 0.3 ease;
+    transition: 0.3s ease;
 }
 
 #navbar li a:hover,
 #navbar li a.active {
-    color: #95036e;  
+    color: #95036e;
 }
 
 #navbar li a.active::after,
@@ -100,36 +104,37 @@ body {
     left: 20px;
 }
 
+/* Hero Section */
 #hero {
-    background-image: url("../images/silverdress.png");
-    background-size: cover;
-    height: 90vh;
-    width: 100%;
-    background-position: fixed;
-    padding:  0 80px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    height: 90vh;
+    width: 100%;
+    padding: 0 80px;
+    background-image: url("../images/silverdress.png");
+    background-size: cover;
+    background-position: fixed;
 }
-
 
 #hero h1 {
     color: #95036e;
 }
 
 #hero button {
+    background-color: transparent;
     background-image: url("../images/button.png");
     background-repeat: no-repeat;
-    background-color: transparent;
     color: #95036e;
     border: none;
-    padding: 14px 80px ;
+    padding: 14px 80px;
     cursor: pointer;
-    font-weight: 700;
     font-size: 15px;
+    font-weight: 700;
 }
 
+/* Feature Section */
 #feature {
     display: flex;
     align-items: center;
@@ -138,24 +143,24 @@ body {
     cursor: pointer;
 }
 
-#feature .fe-box img {
-    width: 150px;
-    height: 150px;
-}
-
 #feature .fe-box {
-    background-color: #ededed;
     width: 180px;
-    text-align: center;
     padding: 25px 15px;
-    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    text-align: center;
+    background-color: #ededed;
     border: 1px solid #e3e3e3;
     border-radius: 5px;
-   margin: 15px 0; 
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    margin: 15px 0;
 }
 
 #feature .fe-box:hover {
     box-shadow: 10px 10px 54px rgba(52, 52, 52, 0.1);
+}
+
+#feature .fe-box img {
+    width: 150px;
+    height: 150px;
 }
 
 #feature .fe-box h6 {
@@ -183,8 +188,16 @@ body {
     background-color: #dcfffd;
 }
 
+/* Product Section */
 #product1 {
     text-align: center;
+}
+
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
 #product1 .pro {
@@ -193,16 +206,14 @@ body {
     padding: 10px 12px;
     border: 1px solid #cfcfcf;
     border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.03);
     margin: 15px 0;
     position: relative;
-
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
 }
 
 #product1 .pro:hover {
     box-shadow: 10px 10px 54px rgba(52, 52, 52, 0.1);
-
 }
 
 #product1 .pro img {
@@ -211,19 +222,26 @@ body {
 }
 
 #product1 .pro .des {
-    text-align: start;
     padding: 10px 0;
+    text-align: start;
 }
 
 #product1 .pro .des span {
-    color: #7f7f7f;
     font-size: 12px;
+    color: #7f7f7f;
 }
 
 #product1 .pro .des h5 {
-    color: #1a1a1a ;
-    padding-top: 7px;
     font-size: 14px;
+    padding-top: 7px;
+    color: #1a1a1a;
+}
+
+#product1 .pro .des h4 {
+    font-size: 15px;
+    font-weight: 700;
+    padding-top: 7px;
+    color: #467b44;
 }
 
 #product1 .pro .des i {
@@ -231,21 +249,14 @@ body {
     color: #eec71a;
 }
 
-#product1 .pro .des h4 {
-    padding-top: 7px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #467b44;
-}
-
 #product1 .pro .cart {
-    background-color: #e8f6ea;
-    color: #467b44;
     width: 40px;
     height: 40px;
     line-height: 40px;
+    background-color: #e8f6ea;
+    border: 1px solid #cce7d0;
+    color: #467b44;
     border-radius: 50px;
-    border: 1px solid #cce7d0 ;
     position: absolute;
     bottom: 20px;
     right: 10px;
